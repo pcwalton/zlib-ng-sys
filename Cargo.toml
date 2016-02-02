@@ -1,0 +1,24 @@
+[package]
+name = "zlib-ng-sys"
+version = "0.1.0"
+authors = ["Patrick Walton <pcwalton@mimiga.net>"]
+links = "zlib-ng"
+build = "build.rs"
+repository = "https://github.com/pcwalton/zlib-ng-sys"
+license = "MIT/Apache-2.0"
+description = "Native bindings to the zlib-ng library"
+
+[lib]
+name = "zlib_ng_sys"
+path = "lib.rs"
+
+[dependencies]
+libc = "0.2"
+
+[build-dependencies]
+gcc = "0.3"
+
+[[example]]
+name = "example"
+path = "example.rs"
+
